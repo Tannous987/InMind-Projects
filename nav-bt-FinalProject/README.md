@@ -1,6 +1,8 @@
 # InMind Final Project – Autonomous TurtleBot3 with Behavior Trees
 
 This repository contains the ROS 2 workspace and code used to build an autonomous TurtleBot3 navigation system using Behavior Trees and Navigation2.
+You can find the full project description here:  
+[Navigation with NAV2 and Behavior Trees](https://jeweled-blackbird-fad.notion.site/Navigation-with-NAV2-and-Behavior-Trees-1c00ecf9765c803f99cffdec44eff189)
 
 ---
 
@@ -13,7 +15,7 @@ Clone this repository into the `src` directory of a new ROS 2 workspace:
 ```bash
 mkdir -p ~/nav_tb3_ws/src
 cd ~/nav_tb3_ws/src
-git clone https://github.com/Tannous987/nav_tb3_ws.git
+git clone https://github.com/Tannous987/nav-bt-FinalProject.git
 ```
 
 ---

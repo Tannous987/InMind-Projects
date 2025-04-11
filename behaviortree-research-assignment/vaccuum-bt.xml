@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root main_tree_to_execute="MainTree">
+    <BehaviorTree ID="MainTree">
+        <Fallback name="MainBehavior">
+            <!-- Battery Management -->
+            <Sequence name="BatteryManagement">
+                <Condition name="IsBatteryLow"/>
+                <Action name="GoToChargingStation"/>
+            </Sequence>
+
+            <!-- Cleaning Sequence -->
+            <Sequence name="CleaningSequence">
+                <Condition name="IsBatterySufficient"/>
+                <Action name="StartCleaning"/>
+                <Fallback name="CleaningAndAvoidance">
+                    <Sequence name="CheckAndClean">
+                        <Condition name="IsAreaDirty"/>
+                        <Fallback name="ObstacleAvoidance">
+                            <Sequence name="AvoidObstacle">
+                                <Condition name="IsObstacleDetected"/>
+                                <Action name="AvoidObstacleAction"/>
+                                <Action name="RecoverIfStuck"/>
+                            </Sequence>
+                            <Action name="MoveForward"/>
+                        </Fallback>
+                    </Sequence>
+                    <Action name="StopCleaning"/>
+                </Fallback>
+                <Condition name="IsBatterySufficient"/>
+            </Sequence>
+
+            <!-- Scheduled Cleaning -->
+            <Sequence name="ScheduledCleaning">
+                <Condition name="IsTimeToClean"/>
+                <Action name="StartScheduledCleaning"/>
+            </Sequence>
+
+            <!-- Error Recovery -->
+            <Sequence name="ErrorRecovery">
+                <Condition name="IsStuck"/>
+                <Action name="RecoverIfStuck"/>
+            </Sequence>
+        </Fallback>
+    </BehaviorTree>
+</root>

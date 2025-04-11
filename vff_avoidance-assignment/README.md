@@ -16,10 +16,7 @@ cd ~/vff_ws/src
 ```
 
 ### 2. Clone the Repository
-Clone the GitHub repository containing the VFF avoidance code:
-```bash
-git clone https://github.com/Tannous987/vff_avoidance.git
-```
+
 ### 3. Build the Workspace
 Navigate back to the workspace root and build the package:
 ```bash

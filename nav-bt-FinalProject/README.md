@@ -15,8 +15,8 @@ Clone this repository into the `src` directory of a new ROS 2 workspace:
 ```bash
 mkdir -p ~/nav_tb3_ws/src
 cd ~/nav_tb3_ws/src
-git clone https://github.com/Tannous987/nav-bt-FinalProject.git
 ```
+then download it or clone it.
 
 ---
 
